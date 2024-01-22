@@ -1,5 +1,5 @@
-import { LitElement, css, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { LitElement, css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 /**
  * An example element.
@@ -7,13 +7,13 @@ import { customElement, property } from "lit/decorators.js";
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement("my-element")
+@customElement('my-element')
 export class MyElement extends LitElement {
   /**
    * Copy for the read the docs hint.
    */
   @property()
-  docsHint = "Click on the Vite and Lit logos to learn more";
+  docsHint = 'Click on the Vite and Lit logos to learn more';
 
   /**
    * The number of times the button has been clicked.
@@ -25,9 +25,7 @@ export class MyElement extends LitElement {
     return html`
       <slot></slot>
       <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
-        </button>
+        <button @click=${this._onClick} part="button">count is ${this.count}</button>
       </div>
       <p class="read-the-docs">${this.docsHint}</p>
     `;
@@ -112,6 +110,6 @@ export class MyElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "my-element": MyElement;
+    'my-element': MyElement;
   }
 }
