@@ -8,7 +8,8 @@
     "lint:css": "stylelint blocks/**/*.css styles/*.css",
     "lint": "npm run lint:js && npm run lint:css",
     "lintAndFix": "eslint --fix 'blocks/**/*.{js,json,ts}'",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "start": "aem up && vite"
   },
   "repository": {
     "type": "git",

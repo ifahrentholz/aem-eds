@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-const { resolve } = require("path");
+import { defineConfig } from 'vite';
+const { resolve } = require('path');
 
 export default defineConfig(({ command, mode }) => {
   return {
@@ -8,23 +8,23 @@ export default defineConfig(({ command, mode }) => {
     },
     build: {
       commonjsOptions: {
-        include: ["node_modules/**"],
+        include: ['node_modules/**'],
       },
-      emptyOutDir: true,
+      emptyOutDir: false,
       rollupOptions: {
         cache: false,
         input: {
-          element: resolve(__dirname, "blocks/element/element.ts"),
-          cards: resolve(__dirname, "blocks/cards/cards.ts"),
+          element: resolve(__dirname, 'blocks/element/element.ts'),
+          cards: resolve(__dirname, 'blocks/cards/cards.ts'),
         },
         output: {
           sourcemap: true,
-          dir: "dist",
+          dir: 'blocks',
           assetFileNames: () => {
-            return "assets/[name].[hash][extname]";
+            return 'assets/[name][extname]';
           },
-          chunkFileNames: "chunks/[name].[hash].js",
-          entryFileNames: "[name]/[name].js",
+          chunkFileNames: '__compiled__chunks/[name].[hash].js',
+          entryFileNames: '[name]/[name].js',
         },
       },
     },
