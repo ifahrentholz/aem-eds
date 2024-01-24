@@ -1,4 +1,4 @@
-import{i as d,n as a,s as f,x as h,t as u}from"../__compiled__chunks/property.7NwZovwM.js";var p=Object.defineProperty,m=Object.getOwnPropertyDescriptor,c=(l,e,i,r)=>{for(var o=r>1?void 0:r?m(e,i):e,n=l.length-1,s;n>=0;n--)(s=l[n])&&(o=(r?s(e,i,o):s(o))||o);return r&&o&&p(e,i,o),o};let t=class extends f{constructor(){super(...arguments),this.docsHint="Click on the Vite and Lit logos to learn more",this.count=0}render(){return h`
+import{i as d,n as a,s as f,x as h,t as u}from"../../__compiled__chunks/property.7NwZovwM.js";var p=Object.defineProperty,m=Object.getOwnPropertyDescriptor,c=(l,e,i,r)=>{for(var o=r>1?void 0:r?m(e,i):e,n=l.length-1,s;n>=0;n--)(s=l[n])&&(o=(r?s(e,i,o):s(o))||o);return r&&o&&p(e,i,o),o};let t=class extends f{constructor(){super(...arguments),this.docsHint="Click on the Vite and Lit logos to learn more",this.count=0}render(){return h`
       <slot></slot>
       <div class="card">
         <button @click=${this._onClick} part="button">count is ${this.count}</button>

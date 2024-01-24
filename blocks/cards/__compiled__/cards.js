@@ -1,4 +1,4 @@
-import{i as l,n as f,s as d,x as u,t as h}from"../__compiled__chunks/property.7NwZovwM.js";var p=Object.defineProperty,b=Object.getOwnPropertyDescriptor,c=(a,t,i,r)=>{for(var o=r>1?void 0:r?b(t,i):t,n=a.length-1,s;n>=0;n--)(s=a[n])&&(o=(r?s(t,i,o):s(o))||o);return r&&o&&p(t,i,o),o};let e=class extends d{constructor(){super(...arguments),this.count=0}render(){return u`
+import{i as l,n as f,s as d,x as u,t as h}from"../../__compiled__chunks/property.7NwZovwM.js";var p=Object.defineProperty,b=Object.getOwnPropertyDescriptor,c=(a,t,i,r)=>{for(var o=r>1?void 0:r?b(t,i):t,n=a.length-1,s;n>=0;n--)(s=a[n])&&(o=(r?s(t,i,o):s(o))||o);return r&&o&&p(t,i,o),o};let e=class extends d{constructor(){super(...arguments),this.count=0}render(){return u`
       <slot></slot>
       <div class="card">
         <button @click=${this._onClick} part="button">count is ${this.count}</button>

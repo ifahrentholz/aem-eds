@@ -21,10 +21,10 @@ export default defineConfig(({ command, mode }) => {
           sourcemap: true,
           dir: 'blocks',
           assetFileNames: () => {
-            return 'assets/[name][extname]';
+            return '[name]/__compiled__/[name][extname]';
           },
           chunkFileNames: '__compiled__chunks/[name].[hash].js',
-          entryFileNames: '[name]/[name].js',
+          entryFileNames: '[name]/__compiled__/[name].js',
         },
       },
     },
