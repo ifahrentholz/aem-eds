@@ -7,8 +7,8 @@ import { customElement, property } from 'lit/decorators.js';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('diva-carousel')
-export class Carousel extends LitElement {
+@customElement('lit-counter')
+export class LitCounter extends LitElement {
   /**
    * The number of times the button has been clicked.
    */
@@ -103,20 +103,12 @@ export class Carousel extends LitElement {
 }
 
 export default function (block: HTMLElement) {
-  console.log('test');
-  if (!block) {
-    console.log('no block provided');
-  }
-
-  block.style.display = 'none';
-  block.innerHTML = `<diva-carousel></diva-carousel>`;
-  setTimeout(() => {
-    block.style.display = 'block';
-  }, 50);
+  const org_content = block.innerHTML;
+  block.innerHTML = `<lit-counter>${org_content}</lit-counter>`;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'diva-carousel': Carousel;
+    'lit-counter': LitCounter;
   }
 }

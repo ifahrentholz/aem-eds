@@ -194,7 +194,13 @@ class Main {
     const sections = document.querySelectorAll<HTMLElement>('.section');
     sections.forEach((section) => {
       const components: ComponentMapping[] = [];
-      section.querySelectorAll<HTMLDivElement>('[data-block-name]').forEach((block: HTMLDivElement) => {
+      const blocks = section.querySelectorAll<HTMLDivElement>('[data-block-name]');
+      if (!blocks.length) {
+        console.log('section', section, 'remove display none');
+        section.style.removeProperty('display');
+        return;
+      }
+      blocks.forEach((block: HTMLDivElement) => {
         components.push({
           name: block.dataset['blockName'] as string,
           element: block,
@@ -210,6 +216,7 @@ class Main {
           }
         });
       }
+      console.log('section', section, 'remove display none');
       section.style.removeProperty('display');
     });
   };

@@ -152,7 +152,6 @@ function setup() {
  */
 
 function init() {
-  console.log('xxxxxxxxxx> init');
   setup();
   sampleRUM('top');
 

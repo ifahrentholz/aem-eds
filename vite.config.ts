@@ -25,7 +25,8 @@ export default defineConfig(({ command, mode }) => {
           main: resolve(__dirname, 'scripts/main.ts'),
           element: resolve(__dirname, 'blocks/element/element.ts'),
           cards: resolve(__dirname, 'blocks/cards/cards.ts'),
-          carousel: resolve(__dirname, 'blocks/carousel/carousel.ts'),
+          'lit-counter': resolve(__dirname, 'blocks/lit-counter/lit-counter.ts'),
+          'native-counter': resolve(__dirname, 'blocks/native-counter/native-counter.ts'),
         },
         output: {
           dir: 'blocks',
