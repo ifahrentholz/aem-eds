@@ -20,10 +20,12 @@ export default defineConfig(({ command, mode }) => {
       emptyOutDir: false,
       rollupOptions: {
         cache: false,
+        preserveEntrySignatures: 'strict',
         input: {
           main: resolve(__dirname, 'scripts/main.ts'),
           element: resolve(__dirname, 'blocks/element/element.ts'),
           cards: resolve(__dirname, 'blocks/cards/cards.ts'),
+          carousel: resolve(__dirname, 'blocks/carousel/carousel.ts'),
         },
         output: {
           dir: 'blocks',
