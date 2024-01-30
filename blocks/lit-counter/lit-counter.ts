@@ -17,7 +17,6 @@ export class LitCounter extends LitElement {
 
   render() {
     return html`
-      <slot></slot>
       <div class="card">
         <button @click=${this._onClick} part="button">count is ${this.count}</button>
       </div>
