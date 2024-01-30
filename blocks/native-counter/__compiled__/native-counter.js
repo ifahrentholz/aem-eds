@@ -1,25 +1,33 @@
-const n=document.createElement("template");n.innerHTML=`
+const e=document.createElement("template");e.innerHTML=`
   <style>
-    * {
-      font-size: 200%;
-    }
-
-    span {
-      width: 4rem;
-      display: inline-block;
-      text-align: center;
+    :host {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
     }
 
     button {
-      width: 4rem;
-      height: 4rem;
-      border: none;
-      border-radius: 10px;
-      background-color: seagreen;
-      color: white;
-    }
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: indianred;
+        color: #333;
+        cursor: pointer;
+        transition: border-color 0.25s;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #1a1a1a;
+        color: #f9f9f9;
+      }
+
   </style>
-  <button id="dec">-</button>
-  <span id="count"></span>
-  <button id="inc">+</button>`;class o extends HTMLElement{constructor(){super(),this.count=0,this.count=0,this.attachShadow({mode:"open"})}connectedCallback(){this.shadowRoot.appendChild(n.content.cloneNode(!0)),this.shadowRoot.getElementById("inc").onclick=()=>this.inc(),this.shadowRoot.getElementById("dec").onclick=()=>this.dec(),this.update(this.count)}inc(){this.update(++this.count)}dec(){this.update(--this.count)}update(e){this.shadowRoot.getElementById("count").innerHTML=e.toString()}}customElements.define("native-counter",o);function i(t){const e=t.innerHTML;t.innerHTML=`<native-counter>${e}</native-counter>`}export{i as default};
+
+  <h3>Native Counter</h3>
+  <button id="btn">count is <span id="count"></span></button>`;class o extends HTMLElement{constructor(){super(),this.count=0,this.count=0,this.attachShadow({mode:"open"})}connectedCallback(){this.shadowRoot.appendChild(e.content.cloneNode(!0)),this.shadowRoot.getElementById("btn").onclick=()=>this.inc(),this.update(this.count)}inc(){this.update(++this.count)}update(n){this.shadowRoot.getElementById("count").innerHTML=n.toString()}}customElements.define("native-counter",o);function i(t){const n=t.innerHTML;t.innerHTML=`<native-counter>${n}</native-counter>`}export{i as default};
 //# sourceMappingURL=native-counter.js.map

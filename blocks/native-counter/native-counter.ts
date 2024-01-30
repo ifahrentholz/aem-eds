@@ -1,28 +1,36 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-    * {
-      font-size: 200%;
-    }
-
-    span {
-      width: 4rem;
-      display: inline-block;
-      text-align: center;
+    :host {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
     }
 
     button {
-      width: 4rem;
-      height: 4rem;
-      border: none;
-      border-radius: 10px;
-      background-color: seagreen;
-      color: white;
-    }
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: indianred;
+        color: #333;
+        cursor: pointer;
+        transition: border-color 0.25s;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #1a1a1a;
+        color: #f9f9f9;
+      }
+
   </style>
-  <button id="dec">-</button>
-  <span id="count"></span>
-  <button id="inc">+</button>`;
+
+  <h3>Native Counter</h3>
+  <button id="btn">count is <span id="count"></span></button>`;
 
 class NativeCounter extends HTMLElement {
   private count = 0;
@@ -34,17 +42,12 @@ class NativeCounter extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot!.appendChild(template.content.cloneNode(true));
-    this.shadowRoot!.getElementById('inc')!.onclick = () => this.inc();
-    this.shadowRoot!.getElementById('dec')!.onclick = () => this.dec();
+    this.shadowRoot!.getElementById('btn')!.onclick = () => this.inc();
     this.update(this.count);
   }
 
   inc() {
     this.update(++this.count);
-  }
-
-  dec() {
-    this.update(--this.count);
   }
 
   update(count: number) {
