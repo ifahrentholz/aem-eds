@@ -15,6 +15,10 @@ export class LitCounter extends LitElement {
   @property({ type: Number })
   count = 0;
 
+  firstUpdated(): void {
+    console.log('first updated');
+  }
+
   render() {
     return html`
       <div class="card">
@@ -61,6 +65,7 @@ export class LitCounter extends LitElement {
 export default function (block: HTMLElement) {
   const org_content = block.innerHTML;
   block.innerHTML = `<lit-counter>${org_content}</lit-counter>`;
+  block.style.removeProperty('display');
 }
 
 declare global {

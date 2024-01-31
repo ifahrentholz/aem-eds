@@ -196,11 +196,11 @@ class Main {
       const components: ComponentMapping[] = [];
       const blocks = section.querySelectorAll<HTMLDivElement>('[data-block-name]');
       if (!blocks.length) {
-        console.log('section', section, 'remove display none');
         section.style.removeProperty('display');
         return;
       }
       blocks.forEach((block: HTMLDivElement) => {
+        block.style.display = 'none';
         components.push({
           name: block.dataset['blockName'] as string,
           element: block,
@@ -216,7 +216,6 @@ class Main {
           }
         });
       }
-      console.log('section', section, 'remove display none');
       section.style.removeProperty('display');
     });
   };

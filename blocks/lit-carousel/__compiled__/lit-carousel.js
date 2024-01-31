@@ -1,0 +1,10 @@
+import{T as v,w as _,j as T,s as $,x as l,n as f,t as y}from"../../__compiled__chunks/property.WZ33pz84.js";/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */const A={ATTRIBUTE:1,CHILD:2,PROPERTY:3,BOOLEAN_ATTRIBUTE:4,EVENT:5,ELEMENT:6},E=s=>(...e)=>({_$litDirective$:s,values:e});class m{constructor(e){}get _$AU(){return this._$AM._$AU}_$AT(e,t,i){this._$Ct=e,this._$AM=t,this._$Ci=i}_$AS(e,t){return this.update(e,t)}update(e,t){return this.render(...t)}}/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */class c extends m{constructor(e){if(super(e),this.et=v,e.type!==A.CHILD)throw Error(this.constructor.directiveName+"() can only be used in child bindings")}render(e){if(e===v||e==null)return this.vt=void 0,this.et=e;if(e===_)return e;if(typeof e!="string")throw Error(this.constructor.directiveName+"() called with a non-string value");if(e===this.et)return this.vt;this.et=e;const t=[e];return t.raw=t,this.vt={_$litType$:this.constructor.resultType,strings:t,values:[]}}}c.directiveName="unsafeHTML",c.resultType=1;const p=E(c);var L=Object.defineProperty,g=Object.getOwnPropertyDescriptor,h=(s,e,t,i)=>{for(var r=i>1?void 0:i?g(e,t):e,n=s.length-1,o;n>=0;n--)(o=s[n])&&(r=(i?o(e,t,r):o(r))||r);return i&&r&&L(e,t,r),r};let u=class extends ${render(){return l`<div>${this.slides.map(s=>l`<div class="slide"><div class="slide__image">${p(s.image)}</div><div class="slide__description">${p(s.description)}</div></div>`)}</div>`}};h([f({type:Array})],u.prototype,"slides",2);u=h([y("lit-carousel")],u);function C(s){const t=[...s.querySelectorAll(":scope > div")].reduce((i,r)=>{var d,a;const n=((d=r.querySelector(":scope > div:first-child"))==null?void 0:d.innerHTML)||"",o=((a=r.querySelector(":scope > div:last-child"))==null?void 0:a.innerHTML)||"";return[...i,{image:n,description:o}]},[]);s.innerHTML="",T(l`<lit-carousel .slides="${t}"></lit-carousel>`,s),s.style.removeProperty("display")}export{u as LitCarousel,C as default};
+//# sourceMappingURL=lit-carousel.js.map
